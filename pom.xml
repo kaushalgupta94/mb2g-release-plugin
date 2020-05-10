@@ -3,7 +3,7 @@
 	<groupId>guru.springframework</groupId>
 	<artifactId>mb2g-release-plugin</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>mb2g-release-plugin Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
