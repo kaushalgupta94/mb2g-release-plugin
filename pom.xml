@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>guru.springframework</groupId>
 	<artifactId>mb2g-release-plugin</artifactId>
@@ -61,4 +63,22 @@
 		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>packagecloud</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>packagecloud.release</id>
+					<url>packagecloud+https://packagecloud.io/ownmavenrepo/release</url>
+				</repository>
+				<snapshotRepository>
+					<id>packagecloud.snapshot</id>
+					<url>packagecloud+https://packagecloud.io/ownmavenrepo/snapshot</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
 </project>
